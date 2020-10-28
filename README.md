@@ -1,3 +1,5 @@
+# (Project is not currently functional, when solutions are found I will finish this project and update readme.)
+
 # Unit 11 Express Homework: Note Taker
 
 ## Description
