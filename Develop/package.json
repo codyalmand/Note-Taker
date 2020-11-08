@@ -30,6 +30,7 @@
   },
   "homepage": "https://github.com/codyalmand/Note-Taker#readme",
   "engines": {
-  "node": "12.18.3"
+  "node": "12.18.3",
+  "npm": "6.14.6"
   }
 }
