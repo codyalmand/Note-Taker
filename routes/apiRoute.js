@@ -10,7 +10,7 @@ const readData = () => {
     const noteData = JSON.parse(fs.readFileSync(path.join(__dirname, '../db/db.json')))
     return noteData;
 }
-// Writes the user input of title/text/id as a string 
+// Converts .json array of title/text/id to be a string 
 const writeData = (noteData) => {
     fs.writeFileSync(path.join(__dirname, '../db/db.json'), JSON.stringify(noteData), (err) => {
         if (err) return ({ err });
@@ -18,17 +18,18 @@ const writeData = (noteData) => {
 }
 // Exports
 module.exports = function (app) {
+// GET method for returning notes
     app.get("/api/notes", (req, res) => {
         let noteData = readData();
         res.json(noteData)
     })
-// Creates new notes
+// POST method to add notes
     app.post('/api/notes', urlencodedParser, (req, res) => {
         let noteData = readData();
         let newNote = req.body;
         let lastNoteID = !noteData[0] ? 0 : noteData[noteData.length - 1].id;
         let newNoteID = parseInt(lastNoteID) + 1;
-// Pushes note input, writes and returns it into db.json file
+
         newNote.id = newNoteID;
         noteData.push(newNote);
         writeData(noteData);
