@@ -9,16 +9,25 @@
 
 <br>
 
-## Visit Deployed Site Here: https://note-taker-by-cba.herokuapp.com/
-
-<br>
+## Visit Deployed Site Here
+### https://note-taker-by-cba.herokuapp.com/
 
 ## Description
 
 This app allows you to write and save/delete notes.
 For users that need to keep track of a lot of information, it's easy to forget or be unable to recall something important. Being able to take persistent notes allows users to have written information available when needed.
 
-<br>
+## Installation
+
+* install node.js,
+* (copy) this repo to clipboard,
+* open console command (terminal / bash)
+* "cd" into the desired folder,
+* "git clone (paste from clipboard)",
+* "cd" to the folder of that created repo copy,
+* npm install,
+* npm start
+
 
 ## Licenses
 
